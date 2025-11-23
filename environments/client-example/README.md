@@ -2,7 +2,7 @@
 
 Este é um ambiente de exemplo que demonstra como utilizar os módulos Terraform para provisionar uma infraestrutura completa na OCI para um novo cliente.
 
-## 📋 Arquitetura Provisionada
+## Arquitetura Provisionada
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -43,7 +43,7 @@ Este é um ambiente de exemplo que demonstra como utilizar os módulos Terraform
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-## 🎯 Recursos Provisionados
+## Recursos Provisionados
 
 ### Network
 - **1x VCN** com CIDR 10.0.0.0/16
@@ -76,7 +76,7 @@ Este é um ambiente de exemplo que demonstra como utilizar os módulos Terraform
   - Round-robin policy
   - Listener HTTP na porta 80
 
-## 📁 Estrutura de Arquivos
+## Estrutura de Arquivos
 
 ```
 cliente-exemplo/
@@ -87,7 +87,7 @@ cliente-exemplo/
 └── README.md         # Este arquivo
 ```
 
-## 🚀 Como Usar para um Novo Cliente
+## Como Usar para um Novo Cliente
 
 ### Passo 1: Copiar o Template
 
@@ -172,7 +172,7 @@ terraform output connection_info
 terraform output infrastructure_summary
 ```
 
-## 📊 Outputs Disponíveis
+## Outputs Disponíveis
 
 ### Network Outputs
 ```bash
@@ -203,7 +203,7 @@ terraform output infrastructure_summary
 terraform output connection_info
 ```
 
-## 🔧 Customizações Comuns
+## Customizações Comuns
 
 ### Alterar Número de Servidores
 
@@ -298,7 +298,7 @@ systemctl restart nginx
 EOF
 ```
 
-## 🔒 Segurança
+## Segurança
 
 ### SSH Keys
 - **NUNCA** commite chaves privadas no repositório
@@ -331,7 +331,7 @@ common_tags = {
 }
 ```
 
-## 🎨 Personalizações Avançadas
+## Personalizações Avançadas
 
 ### Adicionar HTTPS ao Load Balancer
 
@@ -394,7 +394,7 @@ resource "oci_core_volume_backup_policy_assignment" "app_backup" {
 }
 ```
 
-## 📈 Escalabilidade
+## Escalabilidade
 
 ### Scale-Up (Vertical)
 Aumente recursos das instâncias existentes:
@@ -415,7 +415,7 @@ web_instance_count = 5
 terraform apply
 ```
 
-## 🔄 Manutenção
+## Manutenção
 
 ### Atualizar Imagens do SO
 ```bash
@@ -440,7 +440,7 @@ backends = [
 ]
 ```
 
-## 🗑️ Destruição de Recursos
+## Destruição de Recursos
 
 ### Destruir Tudo
 ```bash
@@ -458,7 +458,7 @@ terraform destroy -target=module.app_servers
 terraform destroy -target=module.load_balancer
 ```
 
-## 📝 Checklist de Deploy
+## Checklist de Deploy
 
 - [ ] Credenciais OCI configuradas em `terraform.tfvars`
 - [ ] Nome do cliente definido
@@ -474,7 +474,7 @@ terraform destroy -target=module.load_balancer
 - [ ] Teste de conectividade realizado
 - [ ] Documentação atualizada
 
-## 🆘 Troubleshooting
+## Troubleshooting
 
 ### Erro: "Service limit exceeded"
 - Solicite aumento de limites no OCI Console
@@ -498,13 +498,9 @@ terraform destroy -target=module.load_balancer
 - Para app servers: Use jump host/bastion
 - Confirme Security Lists permitem porta 22
 
-## 📞 Suporte
+## Suporte
 
 Para questões sobre:
 - **Módulos Terraform**: Consulte READMEs dos módulos individuais
 - **OCI**: [Documentação oficial](https://docs.oracle.com/en-us/iaas/Content/home.htm)
 - **Terraform OCI Provider**: [Provider docs](https://registry.terraform.io/providers/oracle/oci/latest/docs)
-
-## 📄 Licença
-
-MIT
