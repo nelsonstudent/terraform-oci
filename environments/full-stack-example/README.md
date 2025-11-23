@@ -2,7 +2,7 @@
 
 Este ambiente provisiona uma infraestrutura completa e robusta na OCI, projetada para uma aplicação full-stack moderna. A arquitetura inclui rede segura, servidores de frontend e backend, um banco de dados gerenciado, um registro de contêiner e um cluster Kubernetes (OKE).
 
-## 📋 Arquitetura Provisionada
+## Arquitetura Provisionada
 
 O diagrama abaixo ilustra a arquitetura que será criada:
 ┌──────────────────────────────────────────────────────────────────────────────────┐
@@ -43,7 +43,7 @@ O diagrama abaixo ilustra a arquitetura que será criada:
 └──────────────────────────────────────────────────────────────────────────────────┘
 
 
-## 🎯 Recursos Provisionados
+## Recursos Provisionados
 
 *   **IAM**:
     *   Grupos `admins` e `developers` para controle de acesso.
@@ -69,7 +69,7 @@ O diagrama abaixo ilustra a arquitetura que será criada:
 *   **Kubernetes (OKE)**:
     *   1 **Cluster Kubernetes Gerenciado** com um *node pool* de workers na sub-rede privada, pronto para orquestrar os contêineres da aplicação.
 
-## 📁 Estrutura de Arquivos
+## Estrutura de Arquivos
 
 full-stack-example/
 ├── main.tf           # Lógica principal que orquestra a criação dos módulos.
@@ -77,7 +77,7 @@ full-stack-example/
 ├── terraform.tfvars  # Valores das variáveis (único arquivo a ser editado).
 └── README.md         # Este guia.
 
-## 🚀 Como Implantar a Infraestrutura
+## Como Implantar a Infraestrutura
 
 ### Passo 1: Pré-requisitos
 
@@ -136,7 +136,7 @@ Este comando provisionará toda a infraestrutura na sua conta OCI. A execução 
 terraform apply "tfplan"
 ```
 
-📊 Acessando os Recursos Criados
+Acessando os Recursos Criados
 Após a conclusão, o Terraform exibirá os outputs com informações importantes, como IPs e IDs. Você também pode consultá-los a qualquer momento com:
 
 # IP público do Load Balancer (ponto de entrada da aplicação)
@@ -151,7 +151,7 @@ terraform output kubernetes_api_endpoint
 # Instruções para configurar o kubectl e acessar o cluster
 terraform output kubernetes_connection_instructions
 
-### 🔧 Customização
+### Customização
 Para alterar a quantidade ou o tamanho dos recursos, basta editar as variáveis correspondentes no arquivo terraform.tfvars e aplicar novamente.
 
 Exemplo: Aumentar o número de servidores de aplicação para 3.
@@ -164,7 +164,7 @@ app_instance_count = 3
 
 2. Execute terraform plan e terraform apply. O Terraform detectará a mudança e criará apenas a nova instância.
 
-### 🗑️ Destruindo a Infraestrutura
+### Destruindo a Infraestrutura
 
 Para remover todos os recursos criados por este ambiente e evitar custos, execute o comando abaixo. Atenção: esta ação é irreversível.
 
