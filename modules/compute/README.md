@@ -369,6 +369,4 @@ disable_management = false  # Permite gerenciamento via OCI
 - Permissões necessárias no compartment
 - Chave SSH válida
 
-## Licença
-
 MIT
